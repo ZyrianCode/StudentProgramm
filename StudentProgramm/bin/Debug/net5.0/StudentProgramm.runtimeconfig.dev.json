@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\RyzenPC\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\RyzenPC\\.nuget\\packages"
+    ]
+  }
+}

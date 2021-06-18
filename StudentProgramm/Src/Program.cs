@@ -1,5 +1,5 @@
 ﻿using System;
-using StudentProgramm.Zyrian;
+using StudentProgramm.Src.Zyrian;
 
 namespace StudentProgramm
 {
@@ -7,23 +7,14 @@ namespace StudentProgramm
     {
         static void Main(string[] args)
         {
-            var studentGroup = new StudentGroup();
-            studentGroup.AddStudent("Ivan", "Ivanov", "AB108", "22.03.2002");
-            studentGroup.AddStudent("Alex", "Artemov", "AC094", "05.04.2000");
+            Menu menu = new Menu();
 
-            foreach (var student in studentGroup){
-                Console.WriteLine(student);
+            menu.CallMenu();
+
+            while (menu.isBack)
+            {
+                menu.CallMenu();
             }
-
-            Console.WriteLine("Sorted:");
-            var comparator = new StudentNameComparator();
-            studentGroup.Sort(comparator);
-            
-            foreach (var student in studentGroup){
-                Console.WriteLine(student);
-            }
-
-            Console.WriteLine("Count of Students: " + studentGroup.Count);
         }
     }
 }

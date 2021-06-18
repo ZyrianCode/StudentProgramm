@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace StudentProgramm.Zyrian
+namespace StudentProgramm.Src.Zyrian
 {
     internal class StudentNameComparator : IComparer<Student>
     {

@@ -1,41 +1,45 @@
-﻿using System;
+﻿using StudentProgramm.Src.Zyrian.Input;
+using StudentProgramm.Src.Zyrian.SchoolSimulator;
+using StudentProgramm.Src.Zyrian.SchoolSimulator.StudentComparators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentProgramm.Src.Zyrian
+namespace StudentProgramm.Src.Zyrian.Operations
 {
     /// <summary>
     /// Класс являющийся набором операций, производимых над студентами в группе
     /// </summary>
-    public class Operations
+    public class StudentOperations
     {
+        private static int _removeOptions;
+        private static int _sortOptions;
+
         /// <summary>
-        /// Доступные опции удаления
+        /// Доступные опции удаления.
         /// </summary>
-        internal enum RemoveOptions
+        internal enum StudentRemoveOptions
         {
             RemoveByPersonalCode = 1,
             RemoveByIndex = 2
         }
 
         /// <summary>
-        /// Доступные опции сортировки
+        /// Доступные опции сортировки.
         /// </summary>
-        internal enum SortOptions 
+        internal enum StudentSortOptions 
         {
             SortByName = 1
         }
 
-        private static int _removeOptions;
-        private static int _sortOptions;
 
         /// <summary>
-        /// Операция печати студентов группы
+        /// Операция печати студентов группы.
         /// </summary>
         /// <param name="group"> Группа студентов </param>
-        internal static void Print(StudentGroup group)
+        internal static void PrintStudents(StudentGroup group)
         {
             foreach (var student in group)
             {
@@ -44,35 +48,34 @@ namespace StudentProgramm.Src.Zyrian
         }
 
         /// <summary>
-        /// Операция добавления студентов
+        /// Операция добавления студентов.
         /// </summary>
         /// <param name="input"> Объект оболочки множественного ввода </param>
         /// <param name="group"> Группа </param>
-        internal static void Add(InputData input, StudentGroup group)
+        internal static void AddStudent(InputStudentData input, StudentGroup group)
         {
             input.InputStudentSpecifications();
             group.AddStudent(input.GetName(), input.GetSurname(), input.GetPatronymic(), input.GetPersonalCode(), input.GetDateOfBirthday());
         }
 
         /// <summary>
-        ///  Операция удаления студентов
+        ///  Операция удаления студентов.
         /// </summary>
         /// <param name="input"> Объект оболочки единственного ввода </param>
         /// <param name="group"> Группа </param>
-        internal static void Remove(SingleInput input, StudentGroup group)
+        internal static void RemoveStudent(SingleInputStudentData input, StudentGroup group)
         {
-            RemoveOptions removeOptions = new RemoveOptions();
             Console.WriteLine("Введите removeOptions: По персональному коду - 1, По индексу - 2 ");
-            InputRemoveOptions(removeOptions);
+            InputStudentRemoveOptions();
 
-            switch ((RemoveOptions)_removeOptions)
+            switch ((StudentRemoveOptions)_removeOptions)
             {
-                case RemoveOptions.RemoveByPersonalCode:
+                case StudentRemoveOptions.RemoveByPersonalCode:
                     input.InputPersonalCode();
                     group.RemoveStudentByPersonalCode(input.GetPersonalCode());
                     input.ClearPersonalCode();
                     break;
-                case RemoveOptions.RemoveByIndex:
+                case StudentRemoveOptions.RemoveByIndex:
                     input.InputIndex();
                     group.RemoveStudentByIndex(input.GetIndex());
                     input.ClearIndex();
@@ -84,34 +87,30 @@ namespace StudentProgramm.Src.Zyrian
         }
 
         /// <summary>
-        /// Ввод типа удаления
+        /// Ввод типа удаления.
         /// </summary>
-        /// <param name="_removeOptions"> Доступные опции удаления </param>
-        internal static void InputRemoveOptions(RemoveOptions removeOptions) => 
+        internal static void InputStudentRemoveOptions() => 
             _removeOptions = int.Parse(Console.ReadLine());
 
         /// <summary>
-        /// Ввод типа сортировки
+        /// Ввод типа сортировки.
         /// </summary>
-        /// <param name="_sortOptions"> Доступные опции сортировки </param>
-        internal static void InputSortOptions(SortOptions sortOptions) =>
+        internal static void InputStudentSortOptions() =>
             _sortOptions = int.Parse(Console.ReadLine());
 
         /// <summary>
-        /// Операция сортировки
+        /// Операция сортировки.
         /// </summary>
-        /// <param name="input"> Объект оболочки единственного ввода </param>
         /// <param name="group"> Группа </param>
-        internal static void Sort(SingleInput input, StudentGroup group)
+        internal static void SortStudents(StudentGroup group)
         {
-            SortOptions sortOptions = new SortOptions();
             Console.WriteLine("Введите sortOptions: По имени - 1");
 
-            InputSortOptions(sortOptions);
+            InputStudentSortOptions();
 
-            switch ((SortOptions)_sortOptions)
+            switch ((StudentSortOptions)_sortOptions)
             {
-                case SortOptions.SortByName:
+                case StudentSortOptions.SortByName:
                     var comparator = new StudentNameComparator();
                     group.Sort(comparator);
                     break;

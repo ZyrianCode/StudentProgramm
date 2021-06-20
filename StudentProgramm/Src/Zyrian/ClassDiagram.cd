@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="StudentProgramm.Src.Zyrian.Input.InputGroupData" Collapsed="true">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAACAAAAAAAIAgAAAAAAA=</HashCode>
+      <FileName>Src\Zyrian\Input\InputGroupData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.Input.InputStudentData" Collapsed="true">
+    <Position X="13.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAJIAAAEAAAABAAAAAAAgAAAAAAQAABAAAAAAGBIA=</HashCode>
+      <FileName>Src\Zyrian\Input\InputStudentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.Input.SingleInputStudentData" Collapsed="true">
+    <Position X="18.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAJIAAUEIABAAQAAAgAAgQAAAAARQABAQIAAAGFAA=</HashCode>
+      <FileName>Src\Zyrian\Input\SingleInputStudentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.Menu.Menu">
+    <Position X="15.5" Y="5.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="StudentProgramm.Src.Zyrian.Menu.Menu.Actions">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Zyrian\Menu\Menu.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEABAAAAAAAAIAAQgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Src\Zyrian\Menu\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.Menu.GroupMenu">
+    <Position X="10.5" Y="5.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="StudentProgramm.Src.Zyrian.Menu.GroupMenu.Actions">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Zyrian\Menu\GroupMenu.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAoAAAAAAAAAAAAAAIAAQgIAAAIAECAAAAA=</HashCode>
+      <FileName>Src\Zyrian\Menu\GroupMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.Menu.StudentMenu">
+    <Position X="20.5" Y="5.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="StudentProgramm.Src.Zyrian.Menu.StudentMenu.Actions">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Zyrian\Menu\StudentMenu.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAMAAAAAAAAAAAAAAAMAAQgIAAAIAACAAAAA=</HashCode>
+      <FileName>Src\Zyrian\Menu\StudentMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.Operations.GroupOperations">
+    <Position X="23.25" Y="5.25" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="StudentProgramm.Src.Zyrian.Operations.GroupOperations.GroupRemoveOptions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Zyrian\Operations\GroupOperations.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="StudentProgramm.Src.Zyrian.Operations.GroupOperations.GroupFindOptions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Zyrian\Operations\GroupOperations.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAEAAAAAAgAACBBAAAAABAgAA=</HashCode>
+      <FileName>Src\Zyrian\Operations\GroupOperations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.Operations.StudentOperations">
+    <Position X="29.75" Y="5.25" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="StudentProgramm.Src.Zyrian.Operations.StudentOperations.StudentRemoveOptions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Zyrian\Operations\StudentOperations.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="StudentProgramm.Src.Zyrian.Operations.StudentOperations.StudentSortOptions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Src\Zyrian\Operations\StudentOperations.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAUAAAAAAiAAAAAIAQAAAgAA=</HashCode>
+      <FileName>Src\Zyrian\Operations\StudentOperations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.SchoolSimulator.School">
+    <Position X="26.5" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAIAAAIAAAAAgAAAEBAAAAAAAAAA=</HashCode>
+      <FileName>Src\Zyrian\SchoolSimulator\School.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.SchoolSimulator.Student">
+    <Position X="36.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAAQAAEAAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Src\Zyrian\SchoolSimulator\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.SchoolSimulator.StudentGroup">
+    <Position X="33" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgIAAACABBAECAAQAAAAAAAAAAEEAAKAAAAAAAA=</HashCode>
+      <FileName>Src\Zyrian\SchoolSimulator\StudentGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="25" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="StudentProgramm.Src.Zyrian.SchoolSimulator.StudentComparators.StudentNameComparator" Collapsed="true">
+    <Position X="39.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Src\Zyrian\SchoolSimulator\StudentComparators\StudentNameComparator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StudentProgramm.Program" Collapsed="true">
+    <Position X="41.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Src\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="System.Collections.Generic.IEnumerable&lt;T&gt;" Collapsed="true">
+    <Position X="44" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace StudentProgramm.Src.Zyrian
+namespace StudentProgramm.Src.Zyrian.SchoolSimulator
 {
     internal class Student
     {

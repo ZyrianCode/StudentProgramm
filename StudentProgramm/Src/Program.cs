@@ -1,5 +1,6 @@
 ﻿using System;
 using StudentProgramm.Src.Zyrian;
+using StudentProgramm.Src.Zyrian.Menu;
 
 namespace StudentProgramm
 {
@@ -11,7 +12,7 @@ namespace StudentProgramm
 
             menu.CallMenu();
 
-            while (menu.isBack)
+            while (menu.isAbleToBack)
             {
                 menu.CallMenu();
             }

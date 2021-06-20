@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentProgramm.Src.Zyrian
+namespace StudentProgramm.Src.Zyrian.Input
 {
-    public class InputData
+    public class InputStudentData
     {
         private string _name;
         private string _surname;

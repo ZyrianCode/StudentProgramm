@@ -1,8 +1,9 @@
-﻿using System;
+﻿using StudentProgramm.Src.Zyrian.Operations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace StudentProgramm.Src.Zyrian
+namespace StudentProgramm.Src.Zyrian.SchoolSimulator
 {
     /// <summary>
     /// Группа студентов
@@ -10,7 +11,6 @@ namespace StudentProgramm.Src.Zyrian
     internal class StudentGroup : IEnumerable<Student>
     {
         private readonly List<Student> _students = new List<Student>();
-        
         public string GroupCode { get; set; }
         public StudentGroup() { }
         public StudentGroup(string groupCode) => GroupCode = groupCode;
@@ -18,7 +18,7 @@ namespace StudentProgramm.Src.Zyrian
         /// <summary>
         /// Подсчёт студентов в группе
         /// </summary>
-        public int Count => _students.Count;
+        public int StudentsCount => _students.Count;
 
         /// <summary>
         /// Метод добавления студентов в группу
@@ -43,12 +43,11 @@ namespace StudentProgramm.Src.Zyrian
         /// <param name="personalCode"> Персональный код студента </param>
         public void RemoveStudentByPersonalCode(string personalCode)
         {
-            foreach (var student in _students)
+            foreach (var student in _students.ToArray())
             {
                 if (student.PersonalCode.Equals(personalCode))
                 {
-                    int index = _students.IndexOf(student);
-                    _students.RemoveAt(index);
+                    _students.Remove(student);
                 }
             }
         }
@@ -59,7 +58,6 @@ namespace StudentProgramm.Src.Zyrian
         /// <param name="index"> Индекс студента в группе </param>
         public void FindStudentByIndex(int index) { }
 
-
         /// <summary>
         /// Метод сортировки студента
         /// </summary>
@@ -67,6 +65,8 @@ namespace StudentProgramm.Src.Zyrian
         public void Sort(IComparer<Student> comparer) => _students.Sort(comparer);
 
         public Student this[int index] => _students[index];
+
+        public override string ToString() => string.Format("{0}\t{1}", GroupCode, StudentsCount);
 
         /// <summary>
         /// 
